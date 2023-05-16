@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 )
-
+//Scan Function called in the main func which receives the IP address and prints out whether the port is open or closed
 func scanPort(host string, port int, wg *sync.WaitGroup) {
 	defer wg.Done()
 	target := fmt.Sprintf("%s:%d", host, port)
